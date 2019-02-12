@@ -1,0 +1,598 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:400,900|Raleway');
+
+html {
+  font-family: 'Lato', sans-serif;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+input.hamburger {
+  display: none;
+}
+input.hamburger:checked ~ label > i {
+  background-color: transparent;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+input.hamburger:checked ~ label > i:before {
+  -webkit-transform: translate(-50%, 0%) rotate(315deg);
+          transform: translate(-50%, 0%) rotate(315deg);
+}
+input.hamburger:checked ~ label > i:after {
+  -webkit-transform: translate(-50%, 0%) rotate(-315deg);
+          transform: translate(-50%, 0%) rotate(-315deg);
+}
+input.hamburger:checked ~ label > div::after {
+  width: 100%;
+}
+input.hamburger:checked ~ label > div::before {
+  width: 0;
+}
+
+label.hamburger {
+  z-index: 9999;
+  position: relative;
+  display: block;
+  height: 50px;
+  width: 50px;
+}
+label.hamburger:hover {
+  cursor: pointer;
+}
+label.hamburger > div {
+  font-size: .8em;
+}
+label.hamburger > div::after, label.hamburger > div::before {
+  top: 100%;
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  overflow: hidden;
+  transition: width .25s .35s, color .45s .35s;
+}
+label.hamburger > div::after {
+  content: 'CLOSE';
+  right: 0;
+  width: 0;
+}
+label.hamburger > div::before {
+  content: 'OPEN';
+  left: 0;
+}
+label.hamburger > i {
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  top: 50%;
+  background-color: #222;
+  pointer-events: auto;
+  transition-duration: .35s;
+  transition-delay: .35s;
+}
+label.hamburger > i:before, label.hamburger > i:after {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 2px;
+  left: 50%;
+  background-color: #222;
+  content: "";
+  transition: -webkit-transform 0.35s;
+  transition: transform 0.35s;
+  transition: transform 0.35s, -webkit-transform 0.35s;
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+}
+label.hamburger > i:before {
+  -webkit-transform: translate(-50%, -14px);
+          transform: translate(-50%, -14px);
+}
+label.hamburger > i:after {
+  -webkit-transform: translate(-50%, 14px);
+          transform: translate(-50%, 14px);
+}
+
+html {
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  height: 100vh;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.primnav li:hover, .primnav expand:hover {
+  background-color: #0fabd2;
+  background-color: rgba(15, 171, 210, 0.6);
+}
+
+.primnav {
+  position: fixed;
+  height: 58px;
+  width: 100vw;
+  font-size: .8em;
+  text-transform: uppercase;
+  background-color: #0D98BA;
+  display: flex;
+  flex-direction: column;
+  transition: height 246ms .5s ease;
+  padding-top: 58px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  border-top: 1px solid rgba(255, 255, 255, 0.8);
+  box-sizing: border-box;
+  z-index: 1;
+}
+@media (min-width: 650px) {
+  .primnav {
+    height: 100vh;
+    width: 58px;
+    transition: width 246ms .5s ease;
+  }
+}
+.primnav > ul {
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.primnav li {
+  font-weight: 400;
+  position: relative;
+}
+.primnav li a {
+  position: relative;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  color: white;
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+}
+.primnav .icon {
+  height: 20px;
+  flex-shrink: 0;
+  width: 20px;
+  padding: 19px;
+  padding-bottom: 18px;
+  color: #efefef;
+  color: rgba(255, 255, 255, 0.9);
+  text-align: center;
+  font-size: 20px;
+}
+
+.secnav {
+  margin-left: 63px;
+  border-left: 1px solid black;
+  border-left-color: #0fabd2 ;
+  border-left-color: rgba(15, 171, 210, 0.9);
+  overflow: hidden;
+}
+.secnav li {
+  color: #0fabd2;
+  color: rgba(255, 255, 255, 0.9);
+  max-height: 100px;
+  transition: max-height .1s;
+}
+@media (min-width: 650px) {
+  .secnav li {
+    max-height: 0px;
+    transition: max-height .5s .5s;
+  }
+}
+.secnav li a {
+  text-transform: initial;
+  display: block;
+  color: inherit;
+  padding: .75em 10px;
+}
+
+content {
+  font-family: 'Lato';
+  color: #212121;
+  font-size: 2vw;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  align-content: center;
+  align-self: center;
+  background-color: #fff;
+  /*padding-top: 58px;*/
+  box-sizing: border-box;
+  position: relative;
+  width: 100%;
+  
+}
+@media (min-width: 650px) {
+  content {
+    padding-top: 0;
+  }
+}
+
+.conteudo {
+  width: 100%;
+  margin-left: 58px;
+}
+
+.principal {
+  padding: 10px;
+  margin-top: 30px;
+  background-color: #fff;
+  font-family: 'Raleway', sans-serif;
+}
+
+.secundario {
+  padding: 20px;
+  margin-top: 30px;
+  background-color: #eee;
+  font-family: 'Raleway', sans-serif;
+  font-size: 20px;
+  line-height: 32px;
+  padding-bottom: 20px;
+}
+
+.secundario2 {
+  padding: 20px;
+  margin-top: 30px;
+  background-color: #fff;
+  font-family: 'Raleway', sans-serif;
+  font-size: 20px;
+  line-height: 32px;
+  padding-bottom: 20px;
+}
+
+.justificado {
+  text-align: justify;
+  margin: 25px;
+}
+
+a {
+  color: #0fabd2;
+}
+
+a:hover {
+  color: #0fabd2;
+}
+
+.listagem1 {
+  font-size: 16px;
+  line-height: 28px;
+}
+
+.titulo {
+  font-size: 60px;
+}
+
+.colorir {
+  color: #0fabd2;
+}
+
+.guiabixo {
+  font-size: 60px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 900;
+  padding-bottom: 15px;
+
+}
+
+.noticon {
+  padding-top: 40px;
+  display: inline-block;
+  font-size: 90px;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+
+h1 {
+  font-family: 'Lato', sans-serif;
+  font-weight: 900;
+}
+
+.robo {
+  width: 250px;
+  height: 250px;
+  border-radius: 125px;
+  border-color: #d20f4a;
+  border-width: 5px;
+  align-self: center;
+}
+
+.alimentacaoLista {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap ;
+  justify-content: space-around;
+  align-content: space-around;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.alimentacaoItem {
+  width: 250px;
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 10px;
+  margin: 10px;
+  border-top-color: #2fcbf2;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-bottom-color: #0f8ba2;
+  border-bottom-style: solid;
+  border-bottom-width: 5px;
+}
+
+.alimentacaoEnd {
+  font-size: 16px;
+  color: #666;
+  line-height: 16px;
+}
+
+.creditos {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap ;
+  justify-content: space-around;
+  align-content: space-around;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.creditosPessoa {
+  width: 300px;
+  background-color: #fff;
+  border-radius: 40px;
+  padding: 10px;
+  margin: 10px;
+  border-top-color: #ccc;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-bottom-color: #999;
+  border-bottom-style: solid;
+  border-bottom-width: 5px;
+}
+
+.imagemCredito {
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+}
+
+table {
+  border-color: #bbb;
+  border-style: solid;
+  border-width: 3px;
+  border-collapse: collapse;
+  text-align: center;
+  font-size: 18px;
+  width: 100%
+}
+
+.tableDia {
+  width: 18%;
+  background-color: #2fcbf2;
+  color: white;
+}
+
+.tableCanto {
+  background-color: #2fcbf2;
+}
+
+.tableHorario {
+  width: 10%;
+  border-right: 2px #ddd solid;
+}
+
+th, td {
+  border-bottom: 1px #ddd solid;
+}
+
+td {
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+tr:nth-child(even) {background-color: #f2f2f2;}
+
+.lateral {
+  background-color: #eee;
+  height: 200px;
+  flex-grow: 1;
+  margin: 15px;
+  width: 25%
+}
+
+.divTabela {
+  flex-basis: 70%;
+}
+
+.contant{
+  display: flex;
+  flex-direction: row ;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
+.features {
+  font-family: 'Lato', sans-serif;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+.features li {
+  width: 100%;
+  text-align: center;
+  padding: .25em;
+}
+
+/**
+    SCROLLBAR STYLE FOR IE
+*/
+body {
+  scrollbar-base-color: #0D98BA;
+  scrollbar-3dlight-color: #fff;
+  scrollbar-highlight-color: #0D98BA;
+  scrollbar-track-color: #0D98BA;
+  scrollbar-arrow-color: #0D98BA;
+  scrollbar-shadow-color: #0D98BA;
+  scrollbar-dark-shadow-color: #0D98BA;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
+.icon {
+  display: inline-block;
+  width: 5vw;
+  height: 4vw;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+
+/** hamburger */
+input.hamburger {
+  display: none;
+}
+input.hamburger:checked ~ nav.primnav {
+  height: 100vh;
+}
+@media (min-width: 650px) {
+  input.hamburger:checked ~ nav.primnav {
+    width: 275px;
+  }
+}
+@media (min-width: 650px) {
+  input.hamburger:checked ~ nav.primnav .secnav > li {
+    max-height: 100px;
+  }
+  input.hamburger:checked ~ nav.primnav .secnav > li:nth-child(1) {
+    transition: max-height 0.5s 0.67s ease-in;
+  }
+  input.hamburger:checked ~ nav.primnav .secnav > li:nth-child(2) {
+    transition: max-height 0.5s 0.69s ease-in;
+  }
+  input.hamburger:checked ~ nav.primnav .secnav > li:nth-child(3) {
+    transition: max-height 0.5s 0.71s ease-in;
+  }
+  input.hamburger:checked ~ nav.primnav .secnav > li:nth-child(4) {
+    transition: max-height 0.5s 0.73s ease-in;
+  }
+  input.hamburger:checked ~ nav.primnav .secnav > li:nth-child(5) {
+    transition: max-height 0.5s 0.75s ease-in;
+  }
+  input.hamburger:checked ~ nav.primnav .secnav > li:nth-child(6) {
+    transition: max-height 0.5s 0.77s ease-in;
+  }
+  input.hamburger:checked ~ nav.primnav .secnav > li:nth-child(7) {
+    transition: max-height 0.5s 0.79s ease-in;
+  }
+  input.hamburger:checked ~ nav.primnav .secnav > li:nth-child(8) {
+    transition: max-height 0.5s 0.81s ease-in;
+  }
+  input.hamburger:checked ~ nav.primnav .secnav > li:nth-child(9) {
+    transition: max-height 0.5s 0.83s ease-in;
+  }
+  input.hamburger:checked ~ nav.primnav .secnav > li:nth-child(10) {
+    transition: max-height 0.5s 0.85s ease-in;
+  }
+}
+input.hamburger:checked ~ label > i {
+  background-color: transparent;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+input.hamburger:checked ~ label > i:before {
+  -webkit-transform: translate(-50%, -50%) rotate(315deg);
+          transform: translate(-50%, -50%) rotate(315deg);
+}
+input.hamburger:checked ~ label > i:after {
+  -webkit-transform: translate(-50%, -50%) rotate(-315deg);
+          transform: translate(-50%, -50%) rotate(-315deg);
+}
+input.hamburger:checked ~ label close {
+  color: rgba(255, 255, 255, 0.8);
+  width: 100%;
+}
+input.hamburger:checked ~ label open {
+  color: rgba(0, 0, 0, 0);
+  width: 0;
+}
+
+label.hamburger {
+  z-index: 9999;
+  position: relative;
+  display: block;
+  height: 24px;
+  width: 24px;
+}
+label.hamburger:hover {
+  cursor: pointer;
+}
+label.hamburger text close,
+label.hamburger text open {
+  text-transform: uppercase;
+  align-text: center;
+  position: absolute;
+  -webkit-transform: translateY(24px);
+          transform: translateY(24px);
+  text-align: center;
+  overflow: hidden;
+  transition: width .25s .35s, color .45s .35s;
+  font-size: 6px;
+}
+label.hamburger text close {
+  color: rgba(255, 255, 255, 0.8);
+  right: 0;
+  width: 0;
+}
+label.hamburger text open {
+  color: rgba(255, 255, 255, 0.8);
+  width: 100%;
+}
+label.hamburger > i {
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  top: 50%;
+  background-color: rgba(255, 255, 255, 0.8);
+  pointer-events: auto;
+  transition-duration: .35s;
+  transition-delay: .35s;
+}
+label.hamburger > i:before, label.hamburger > i:after {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 2px;
+  left: 50%;
+  background-color: rgba(255, 255, 255, 0.8);
+  content: "";
+  transition: -webkit-transform 0.35s;
+  transition: transform 0.35s;
+  transition: transform 0.35s, -webkit-transform 0.35s;
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+}
+label.hamburger > i:before {
+  -webkit-transform: translate(-50%, -7px);
+          transform: translate(-50%, -7px);
+}
+label.hamburger > i:after {
+  -webkit-transform: translate(-50%, 7px);
+          transform: translate(-50%, 7px);
+}
+
+label.hamburger {
+  position: fixed;
+  top: 14px;
+  left: 17px;
+}
