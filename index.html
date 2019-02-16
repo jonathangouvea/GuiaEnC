@@ -17,30 +17,8 @@
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 		
 		<link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css" />
-		<script src="https://unpkg.com/simplebar@latest/dist/simplebar.js"></script>
-
-    <script type="text/javascript">
-      function mudarGrade(tipo) {
-        if(tipo == 1) {
-          document.getElementById("lateral").innerHTML = "<span class=\"colorir\"><b>Cálculo Diferencial e Integral I</b></span><br> <i>Professor(a): Desconhecido</i><br>Turma C<br><br> <b>Objetivo:</b> Propiciar o aprendizado dos conceitos de limite, derivada e integral de funções de uma variável real. Propiciar a compreensão e o domínio dos conceitos e das técnicas de cálculo diferencial e integral.<br>"
-        }
-        if(tipo == 2) {
-          document.getElementById("lateral").innerHTML = "<span class=\"colorir\"><b>Geometria Analítica</b></span><br> <i>Professora: Selma Helena de Jesus Nicola</i><br>Turma A<br><br> <b>Objetivo:</b> Estudo de matrizes; Sistemas Lineares; Eliminação Euclidiana. Vetores; produto escalar;vetorial e misto. Retas e Plano. Cônicas e Quadráticas.<br>"
-        }
-        if(tipo == 3) {
-          document.getElementById("lateral").innerHTML = "<span class=\"colorir\"><b>Construção de Algoritmos e Programação</b></span><br> <i>Professor: Jander Moreira</i><br>Turma A - Local LE-2 (DC)<br><br> <b>Objetivo:</b> Tornar os estudantes aptos a utilizar pensamento computacional e algorítmico para proposição de soluções de problemas. Capacitar os estudantes a mapear tais soluções em programas usando linguagem de programação.<br>"
-        }
-        if(tipo == 4) {
-          document.getElementById("lateral").innerHTML = "<span class=\"colorir\"><b>Introdução ao Pensamento Algorítmico</b></span><br> <i>Professor: Diego Furtado Silva</i><br>Turma B<br><br> <b>Objetivo:</b> Motivar e orientar os estudantes a desenvolver soluções sistemáticas para problemas diversos, contextualizados em situações cotidianas, de modo que estas possam ser implementadas a fim de usar o computador como ferramenta para obtenção de resultados.<br>"
-        }
-        if(tipo == 5) {
-          document.getElementById("lateral").innerHTML = "<span class=\"colorir\"><b>Lógica Digital (Teórico)</b></span><br> <i>Professor: Ricardo Menotti</i><br>Turma A/B<br><br> <b>Objetivo: </b> Ao final da disciplina o estudante deve ser capaz de projetar e analisar circuitos digitais combinatórios e sequenciais e executar sua implementação usando circuitos integrados e linguagem de descrição de hardware.<br>"
-        }
-        if(tipo == 6) {
-          document.getElementById("lateral").innerHTML = "<span class=\"colorir\"><b>Lógica Digital (Prática)</b></span><br> <i>Professor: Ricardo Menotti</i><br>Turma A/B<br><br> <b>Objetivo: </b>Mesmo que a teórica.<br><b>O calouro só fará uma das duas aulas, metade da turma em um dia e metade em outro! O estudante vai saber qual a sua turma após a matrícula<br>"
-        }
-      }
-    </script>
+    <script src="https://unpkg.com/simplebar@latest/dist/simplebar.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
 	</head>
 	
 	<body>
@@ -136,17 +114,17 @@
   </nav>
 
 <content>
-  <div class="conteudo">
-    <div class="principal bemvindo" id="welcome">
+  <div class="conteudo" id="welcome">
+    <div class="principal bemvindo">
       <span class="guiabixo">Guia Bixo 2019</span><br>
       <img class="robo" src="robo1.jpg"><br>
       Parabéns ingressante! Seja bem vindo à Universidade Federal de São Carlos, UFSCar!<br>
       Confira várias dicas para sua passagem no curso de Engenharia de Computação!<br>  
     </div>
 
-    <div class="secundario">
+    <div class="secundario" id="importante">
       <i class="fas fa-exclamation-triangle noticon"></i>
-      <h1 class="titulo" id="importante">Importante</h1>
+      <h1 class="titulo">Importante</h1>
       <b>Confirmação de Matrícula: <span class="colorir">11 e 12 de março.</span></b><br>
       <b>Local de Matrícula: <span class="colorir">Departamento de Computação.</span></b><br><br>
       Documentos necessários: <br>
@@ -168,8 +146,8 @@
 
     <img src="ufscar1.jpg" width="100%">
 
-    <div class="secundario2">
-      <h1 class="titulo" id="moradia">Moradia</h1>
+    <div class="secundario2" id="moradia">
+      <h1 class="titulo">Moradia</h1>
         <h2>Kitnet</h2>
         <div class="justificado">
           Kitnets são uma boa opção se você prefere não dividir moradia por quaisquer motivos. O custo varia dependendo da localização, havendo alguns bairros que agradam um pouco mais o bolso do que outros, com o aluguel podendo variar de <span class="colorir">R$300 à R$ 1600</span>!<br><br>
@@ -234,8 +212,8 @@
     </div>
 
 
-    <div class="secundario">
-      <h1 class="titulo"  id = "sanca">São Carlos</h1>
+    <div class="secundario" id = "sanca">
+      <h1 class="titulo">São Carlos</h1>
         <h2 id="transporte">Ônibus</h2>
           <div class="justificado">
             Andar de ônibus em São Carlos não é uma tarefa complicada. Se você não tiver outro meio de transporte, com certeza irá lidar com essa jornada diária que é ir para a nossa querida federal.<br><br>
@@ -499,8 +477,8 @@
 
     <img src="ufscar2.jpg" width="100%">
 
-    <div class="secundario2">
-      <h1 class="titulo"  id="ufscar">UFSCar</h1>
+    <div class="secundario2"  id="ufscar">
+      <h1 class="titulo">UFSCar</h1>
       <div class="justificado">
         A Universidade Federal de São Carlos (UFSCar) foi fundada em 1968 e foi a primeira instituição federal de Ensino Superior instalada no interior do Estado de São Paulo. A Universidade se destaca pelo alto nível de qualificação de seu corpo docente: 99,8% são doutores ou mestres e 95,8% dos professores desenvolvem atividades de ensino, pesquisa e extensão em regime de dedicação exclusiva.<br><br>
 
@@ -618,8 +596,8 @@
 
     <img src="dc1.jpg" width="100%">
 
-    <div class="secundario">
-      <h1 class="titulo"  id="enc">Engenharia de Computação</h1>
+    <div class="secundario"  id="enc">
+      <h1 class="titulo">Engenharia de Computação</h1>
       <div class="justificado">
         O curso de Engenharia de Computação tem por objetivo formar um profissional capaz de encontrar soluções integrando hardware e software, bem como seus mecanismos de comunicação em redes e de interfaces com outras máquinas, podendo fazer desde o projeto até a sua implementação. <br><br>
 
@@ -697,8 +675,8 @@ real. Propiciar a compreensão e o domínio dos conceitos e das técnicas de cá
 
     </div>
 
-    <div class="secundario2">
-      <h1 class="titulo"  id="sobre">Sobre</h1>
+    <div class="secundario2"  id="sobre">
+      <h1 class="titulo">Sobre</h1>
       <div class="justificado">
         Esperamos que você tenha gostado da leitura e que ela tenha sido muito útil! Esse gua foi feito com amor e pensando em responder (algumas) dúvidas que os ingressantes costumam ter! Passe pra frente o guia e ao longo do ano faça melhorias à ele, adicione mais conteúdos! <br><br>
       </div>
@@ -760,6 +738,35 @@ real. Propiciar a compreensão e o domínio dos conceitos e das técnicas de cá
     <img src="dc2.jpg" width="100%">
   </div>
 </content>
+
+<script type="text/javascript">
+  function mudarGrade(tipo) {
+    if(tipo == 1) {
+      document.getElementById("lateral").innerHTML = "<span class=\"colorir\"><b>Cálculo Diferencial e Integral I</b></span><br> <i>Professor(a): Desconhecido</i><br>Turma C<br><br> <b>Objetivo:</b> Propiciar o aprendizado dos conceitos de limite, derivada e integral de funções de uma variável real. Propiciar a compreensão e o domínio dos conceitos e das técnicas de cálculo diferencial e integral.<br>"
+    }
+    if(tipo == 2) {
+      document.getElementById("lateral").innerHTML = "<span class=\"colorir\"><b>Geometria Analítica</b></span><br> <i>Professora: Selma Helena de Jesus Nicola</i><br>Turma A<br><br> <b>Objetivo:</b> Estudo de matrizes; Sistemas Lineares; Eliminação Euclidiana. Vetores; produto escalar;vetorial e misto. Retas e Plano. Cônicas e Quadráticas.<br>"
+    }
+    if(tipo == 3) {
+      document.getElementById("lateral").innerHTML = "<span class=\"colorir\"><b>Construção de Algoritmos e Programação</b></span><br> <i>Professor: Jander Moreira</i><br>Turma A - Local LE-2 (DC)<br><br> <b>Objetivo:</b> Tornar os estudantes aptos a utilizar pensamento computacional e algorítmico para proposição de soluções de problemas. Capacitar os estudantes a mapear tais soluções em programas usando linguagem de programação.<br>"
+    }
+    if(tipo == 4) {
+      document.getElementById("lateral").innerHTML = "<span class=\"colorir\"><b>Introdução ao Pensamento Algorítmico</b></span><br> <i>Professor: Diego Furtado Silva</i><br>Turma B<br><br> <b>Objetivo:</b> Motivar e orientar os estudantes a desenvolver soluções sistemáticas para problemas diversos, contextualizados em situações cotidianas, de modo que estas possam ser implementadas a fim de usar o computador como ferramenta para obtenção de resultados.<br>"
+    }
+    if(tipo == 5) {
+      document.getElementById("lateral").innerHTML = "<span class=\"colorir\"><b>Lógica Digital (Teórico)</b></span><br> <i>Professor: Ricardo Menotti</i><br>Turma A/B<br><br> <b>Objetivo: </b> Ao final da disciplina o estudante deve ser capaz de projetar e analisar circuitos digitais combinatórios e sequenciais e executar sua implementação usando circuitos integrados e linguagem de descrição de hardware.<br>"
+    }
+    if(tipo == 6) {
+      document.getElementById("lateral").innerHTML = "<span class=\"colorir\"><b>Lógica Digital (Prática)</b></span><br> <i>Professor: Ricardo Menotti</i><br>Turma A/B<br><br> <b>Objetivo: </b>Mesmo que a teórica.<br><b>O calouro só fará uma das duas aulas, metade da turma em um dia e metade em outro! O estudante vai saber qual a sua turma após a matrícula<br>"
+    }
+  }
+</script>
+
+<script>
+  $( '.primnav li a' ).on("click", function(){
+    document.getElementById("hamburger").checked = false;
+  });
+</script>
 
 </body>
 </html>

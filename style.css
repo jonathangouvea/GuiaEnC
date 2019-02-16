@@ -127,11 +127,10 @@ ul {
   background-color: #0D98BA;
   display: flex;
   flex-direction: column;
-  transition: height 246ms .5s ease;
+  transition: height 246ms .1s ease;
   padding-top: 58px;
   overflow-x: hidden;
   overflow-y: hidden;
-  border-top: 1px solid rgba(255, 255, 255, 0.8);
   box-sizing: border-box;
   z-index: 1;
 }
@@ -139,7 +138,7 @@ ul {
   .primnav {
     height: 100vh;
     width: 58px;
-    transition: width 246ms .5s ease;
+    transition: width 246ms .1s ease;
   }
 }
 .primnav > ul {
@@ -241,7 +240,6 @@ content {
   font-size: 20px;
   line-height: 32px;
   padding-bottom: 20px;
-  width: 100%;
 }
 
 @media (min-width: 768px) {
@@ -426,7 +424,6 @@ tr:nth-child(even) {background-color: #f2f2f2;}
 
 .lateral {
   background-color: #eee;
-  height: 200px;
   flex-grow: 1;
   margin: 15px;
   width: 25%
