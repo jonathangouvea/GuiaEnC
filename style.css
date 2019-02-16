@@ -431,8 +431,15 @@ tr:nth-child(even) {background-color: #f2f2f2;}
   background-color: #eee;
   flex-grow: 1;
   margin: 15px;
-  width: 25%
+  width: 100%
 }
+
+@media (min-width: 768px) {
+  .lateral {
+    width: 25%
+  }
+}
+
 
 .divTabela {
   flex-basis: 70%;
