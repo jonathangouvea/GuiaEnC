@@ -17,7 +17,8 @@
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 		
 		<link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css" />
-		<script src="https://unpkg.com/simplebar@latest/dist/simplebar.js"></script>
+    <script src="https://unpkg.com/simplebar@latest/dist/simplebar.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
 	</head>
 	
 	<body>
@@ -759,6 +760,12 @@ real. Propiciar a compreensão e o domínio dos conceitos e das técnicas de cá
       document.getElementById("lateral").innerHTML = "<span class=\"colorir\"><b>Lógica Digital (Prática)</b></span><br> <i>Professor: Ricardo Menotti</i><br>Turma A/B<br><br> <b>Objetivo: </b>Mesmo que a teórica.<br><b>O calouro só fará uma das duas aulas, metade da turma em um dia e metade em outro! O estudante vai saber qual a sua turma após a matrícula<br>"
     }
   }
+</script>
+
+<script>
+  $( '.primnav li a' ).on("click", function(){
+    document.getElementById("hamburger").checked = false;
+  });
 </script>
 
 </body>
