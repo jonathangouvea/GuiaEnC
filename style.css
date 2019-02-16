@@ -227,10 +227,15 @@ content {
 }
 
 .principal {
-  
-  margin-top: 30px;
+  margin-top: 60px;
   background-color: #fff;
   font-family: 'Raleway', sans-serif;
+}
+
+@media (min-width: 768px) {
+  .principal {
+    margin-top: 30px;
+  }
 }
 
 .secundario {
