@@ -440,9 +440,15 @@ tr:nth-child(even) {background-color: #f2f2f2;}
 
 .contant{
   display: flex;
-  flex-direction: row ;
+  flex-direction: column ;
   flex-wrap: nowrap;
   justify-content: space-between;
+}
+
+@media (min-width: 768px) {
+  .contant{
+    flex-direction: row ;
+  }
 }
 
 .features {
